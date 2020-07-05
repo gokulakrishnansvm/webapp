@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #dfe3ee;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #3b5998;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+img {
+	width: 600px;
+	height: 400px;
+	margin: 10px;
+	transition: all 0.4s;
+}
+
+img:hover {
+	transform: scale(1.1);
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>STUDENT GREIVANCE SYSTEM</h1>
+</div>
+
+<div class="navbar">
+  <a href="https://gokulakrishnan.s3.amazonaws.com/index.html">HOME</a>
+  <a href="https://gokulakrishnan.s3.amazonaws.com/complaint1.html">FILE A COMPLAINT</a>
+<a href="#">DISCLAIMER</a>
+<a href="contact.html">CONTACT US</a>
+
+  <a href="https://gokulakrishnan.s3.amazonaws.com/login.html" class="right">SIGN-IN</a>
+<div class="dropdown">
+  <a href="https://gokulakrishnan.s3.amazonaws.com/about.html">ABOUT US</a>
+</div>
+
+  <div class="main">
+    <h2>STUDENT GREIVANCE CELL</h2>
+  <div class="container">
+		<img src="stud.png">
+		
+	</div>
+    <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">The function of the cell is to look into the complaints lodged by any student, and judge its merit. The Grievance cell is also empowered to look into matters of harassment. Anyone with a genuine grievance may approach the department members in person, or in consultation with the officer in-charge Students’ Grievance Cell. In case the person is unwilling to appear in self, grievances may be dropped in writing at the letterbox/ suggestion box of the Grievance Cell at Administrative Block. Grievances may also be sent through e-mail to the officer in-charge of Students’ Grievance Cell.</p>
+    <br>
+    <h2>OBJECTIVE</h2>
+    <div class="container">
+		<img src="comp.png">
+		
+	</div>
+    <p>The objective of the Grievance Cell is to develop a responsive and accountable attitude among all the stakeholders in order to maintain a harmonious educational atmosphere in the institute.</p>
+  </div>
+</div>
+<script>
+function mouseDown() {
+  document.getElementById("p1").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("p1").style.color = "green";
+}
+</script>
+
+</body>
+</html>
